@@ -1,4 +1,4 @@
-﻿﻿/*
+﻿/*
 	1. key 변수를 생성하고 num값 185를 넣으세요.
 
 	2. update라는 이름의 함수를 만드세요.
@@ -48,48 +48,3 @@
 		- #arr-top과 #arr-bottom, 각각 for문 썼을때 안썼을 때 어떻게 바꿔야할지 생각해보세요.
 
 */
-
-var key = 185;
-
-// for문 없이 
-function up(){
-	var i = 1;
-	
-	key += i;
-	update()
-}
-
-// function down(){
-// 	var i = 1;
-
-// 	key -= i;
-// 	update()
-// }
-
-// for문 사용
-function down(){
-	for(i=1; i<=key; i++){
-		if(key < 100){
-			break;
-		}
-		key -= i - i + 1;
-		console.log(key)
-	}
-	update()
-}
-
-function update(){
-	document.querySelector('#height').innerText = key + 'cm';
-	document.querySelector('#leg').style.height = `${key}px`
-
-	console.log(key)
-	if( key < 160 ){
-		document.querySelector('#face').classList.add('cry')
-	}
-	else{
-		document.querySelector('#face').classList.remove('cry')
-	}
-}
-
-down()
-update()
